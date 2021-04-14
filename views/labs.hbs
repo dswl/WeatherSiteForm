@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Labs Page</title>
+	<link type="text/css" rel="stylesheet" href="./css/maincss.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="topnav" id="myTopnav">
+	  <a href="./">Home</a>
+	  <a href="labs" class="active">Labs</a>
+	  <a href="weatherform">Weather Form</a>
+	  <a href="getweather">Weather</a>
+	  <a href="funform">Fun Form</a>
+	</div>
+	<h1>Labs Page</h1>
+
+	<div>
+		<p>Here you can access buttons to test the labs!</p>
+
+		<div>
+			<button onclick="weatherform()">Input Cords in a Form</button>
+		</div>
+		<div>
+			<button onclick="pageRedirectWeather()">Get the weather</button>
+			<button onclick="showWeather(38.8184266590832, -77.16875264702865)">Get the weather at TJHSST</button>
+			<button onclick="showWeather(39.0947279, -94.5793)">Get the weather in Kansas City</button>
+			<button onclick="showWeather(40.65053389618043, -73.96046222817202)">Get the weather in NYC</button>
+			<button onclick="showWeather(19.615706616461605, -155.44340544886182)">Get the weather in Hawaii</button>
+		</div>
+		
+		<div>
+		    <button onclick="redirectNumberLab()" class="delayButton">Get Facts About 4</button>
+		    <button onclick="redirectNumberLabJson()" class="delayButton">Get Facts About 6 in json format</button>
+		    <button onclick="redirectNumberLabTwo()" class="delayButton">Get 2 Facts About 7</button>
+		    <button onclick="redirectNumberLabThreeJson()" class="delayButton">Get 2 Facts About 3 that are in json format</button>
+		</div>
+		
+		<button onclick="pageRedirect()" class="mostDelayButton">Home Page</button>
+	</div>
+	<script>
+		function pageRedirect() {
+    	    window.location.replace("/");
+    	}
+
+		function weatherform() {
+    	    window.location.replace("/weatherform");
+    	}
+
+		function showWeather(lat,long) {
+    	    window.location.replace("/getweather?lat="+lat+"&long="+long);
+    	}
+
+		function pageRedirectWeather() {
+    	    window.location.replace("/getweather");
+    	}
+    	
+    	function redirectNumberLab() {
+    	    window.location.replace("/4");
+    	}
+
+		function redirectNumberLabJson() {
+    	    window.location.replace("/6?format=json");
+    	}
+
+		function redirectNumberLabTwo() {
+    	    window.location.replace("/7?num_facts=2");
+    	}
+
+		function redirectNumberLabThreeJson() {
+    	    window.location.replace("/3?num_facts=2&format=json");
+    	}
+    	
+	</script>
+
+</body>
+</html>

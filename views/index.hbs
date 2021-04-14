@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>David Liu Website</title>
+	<link type="text/css" rel="stylesheet" href="/css/maincss.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="topnav" id="myTopnav">
+	  <a href="" class="active">Home</a>
+	  <a href="labs">Labs</a>
+	  <a href="weatherform">Weather Form</a>
+	  <a href="getweather">Weather</a>
+	  <a href="funform">Fun Form</a>
+	</div>
+	<h1>Weather Form Website</h1>
+
+	<div>
+		<p>Made by David Liu</p>
+		<button onclick="pageRedirect()">Labs Page</button>
+		<button onclick="pageRedirectWeather()">Check out the weather!</button>
+		<button onclick="pageRedirectUrlWeatherForm()">Weather Form</button>
+		<button onclick="pageRedirectFunForm()">Fun Form 😎</button>
+	</div>
+	<script>
+    	function pageRedirect() {
+    	    window.location.replace("/labs");
+    	}
+
+		function pageRedirectUrlWeatherForm() {
+    	    window.location.replace("/weatherform");
+    	}
+		function pageRedirectFunForm() {
+    	    window.location.replace("/funform");
+    	}
+
+		function pageRedirectWeather() {
+    	    window.location.replace("/getweather");
+    	}
+
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+		    x.className += " responsive";
+		  } else {
+		    x.className = "topnav";
+		  }
+		}
+
+	</script>
+</body>
+</html>

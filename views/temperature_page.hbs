@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Temp Page</title>
+    <link type="text/css" rel="stylesheet" href="/css/maincss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+	    <a href="./">Home</a>
+	    <a href="labs">Labs</a>
+      <a href="weatherform">Weather Form</a>
+	    <a href="getweather" class="active">Weather</a>
+      <a href="funform">Fun Form</a>
+	  </div>
+	</div>
+    <h1>Here is the weather for the specified location:</h1>
+    {{!-- <h1>The current temperature at the specified location is {{temperature}} {{temperature_unit}}!</h1>
+
+    <p>These values are for latitude: {{lat}} and longitude: {{long}}</p>
+    <p>Which is {{city}}, {{state}}</p>
+
+    <p>These values are accurate from {{startTime}} to {{endTime}}</p> --}}
+    <div>
+      <ul>
+        {{#each information}}
+          <p>{{this}}</p>
+        {{/each}}
+      </ul>
+    </div>
+    <button onclick="pageRedirect()">Take me back to the home page!</button>
+    <script>
+		function pageRedirect() {
+    	    window.location.replace("/");
+    	}
+	</script>
+  </body>
+
+</html>

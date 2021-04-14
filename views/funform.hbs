@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Numba Facts</title>
+    <link type="text/css" rel="stylesheet" href="./css/maincss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+	  <a href="./">Home</a>
+	  <a href="labs">Labs</a>
+      <a href="weatherform">Weather Form</a>
+	  <a href="getweather">Weather</a>
+      <a href="funform" class="active">Fun Form</a>
+	</div>
+    <h1>Welcome to a fun form!</h1>
+
+    <p>Enter information in the form below:</p>
+
+    <form action="/funformend" method="get">
+        <div>
+            <label for="name">Name:</label>
+            <input name="name" type="text" required/><br>
+            <label for="age">Age:</label>
+            <input name="age" type="number" required/><br>
+            <label for="color">Favorite Color:</label>
+            <input name="color" type="color" required/><br>
+            <label for="birthday">Next Birthday:</label>
+            <input name="birthday" type="date" required/><br>
+        </div>
+        <div>
+            <label for="pokemon" >Favorite Starter Pokemon</label><br>
+            <input type="radio" id="piplup" name="pokemon" value="piplup" required>
+            <label for="piplup">Piplip</label><br>
+            <input type="radio" id="turtwig" name="pokemon" value="turtwig" required>
+            <label for="turtwig">Turtwig</label><br>
+            <input type="radio" id="chimchar" name="pokemon" value="chimchar" required>
+            <label for="chimchar">Chimchar</label><br>
+        </div>
+        <button type="submit" class="submitbutton">Submit</button>
+    </form>
+
+
+    <button onclick="pageRedirect()">Take me back to the home page!</button>
+
+    <script>
+		function pageRedirect() {
+    	    window.location.replace("/");
+    	}
+	</script>
+  </body>
+
+</html>

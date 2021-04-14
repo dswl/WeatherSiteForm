@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 Page</title>
+	<link type="text/css" rel="stylesheet" href="/css/maincss.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="topnav" id="myTopnav">
+	  <a href="./">Home</a>
+	  <a href="labs">Labs</a>
+	  <a href="weatherform">Weather Form</a>
+	  <a href="getweather" class="active">Weather</a>
+	  <a href="funform">Fun Form</a>
+	</div>
+	<h1>Error!</h1>
+
+	<div>
+		<p>An invalid set of coordinates were inputted! Cringe!</p>
+		<button onclick="pageRedirect()">Take me back to the home page!</button>
+	</div>
+	<script>
+		function pageRedirect() {
+    	    window.location.replace("/");
+    	}
+	</script>
+
+</body>
+</html>
